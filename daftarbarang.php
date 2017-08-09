@@ -40,7 +40,7 @@ include "menubarang.php";
             <td><?php echo $data['namabarang']?></td>
             <td><?php echo $data['harga'];?></td>
             <td><?php echo $data['persediaan']?></td>
-            <td><!-- buat link untuk edit dan delete dan berikan parameter dgn nama "kode"--><a href="editbarang.php?kode=<?php echo $data['kodebarang']?>">Edit</a> </td><td><a href="deletebarang.php?kode=<?php echo $data['kodebarang']?>">Delete</a></td>
+            <td><!-- buat link untuk edit dan delete dan berikan parameter dgn nama "kode"--><a href="editbarang.php?kode=<?php echo $data['kodebarang']?>">Edit</a> </td><td><a href="delete.php?kode=<?php echo $data['kodebarang']?>" onclick="return confirm('Are you sure?')">Delete</a></td>
         </tr>
         <?php
         $no++;}
