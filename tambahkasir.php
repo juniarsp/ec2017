@@ -60,13 +60,12 @@ include "koneksi.php";
 if(isset($_POST['tblIsi'])){
     //ini adalah variabel untuk menampung inputan dari form (nama variabel bebas)
     // yang ada di dalam $_POST[''] adalah nama dari masing-masing textbox
-    $id_ksrr = $_POST['txtid_ksr'];
     $nik = $_POST['txtnik'];
     $nm_ksr = $_POST['txtnm_ksr'];
 
     //siapkan sebuah variabel untuk menampung query mysql
     //yang ada di dalam VALUES harus berurutan sesuai dengan uturan field yang ada dalam tabel
-    $sql = "INSERT INTO kasir VALUES('$id_ksrr','$nik','$nm_ksr')";
+    $sql = "INSERT INTO kasir VALUES(NULL,'$nik','$nm_ksr')";
     //jalankan kuerynya
     $kueri = mysql_query($sql);
     //cek apakah variabel $kueri bernilai TRUE atau FALSE
